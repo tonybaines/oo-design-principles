@@ -20,21 +20,21 @@ h3. Single Responsibility Principle
 * Do one job
 * One reason to change
 
-- Business logic and persistence
+- src/main/java/srp
 
 h3. Open/Closed Principle
 * Open for extension, Closed for modification
 * The axis of change leads to new classes, not changes to existing ones
 * Closely coupled to the Strategy + Abstract Method DP
 
-- src/main/java/ocp/SqlAllInOne.java
+- src/main/java/ocp
 
 
 h3. Liskov Substitution Principle
 * Instances of a subclass should be completely interchangeable with their parent and vice versa
 * Implicit contracts
 
-- Squares and rectangles
+- src/main/java/lsp
 
 h3. Interface Segregation Principle
 * An interface should be a specific as possible
