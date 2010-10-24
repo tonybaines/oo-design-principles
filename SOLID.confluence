@@ -1,0 +1,59 @@
+h1. Design Principles
+* Mostly about object orientation
+* The underlying principles are more broadly applicable
+ 
+{toc}
+h2. DRY
+* Don't Repeat Yourself
+* One authoritative source of every piece of information or logic
+* Duplicated code => duplicated bugs
+* Duplicated configuration => unexpected behaviour at runtime 
+
+h2. Coupling & Cohesion
+* Low coupling - 
+
+h2. SOLID
+Robert Martin (aka Uncle Bob) 
+
+
+h3. Single Responsibility Principle
+* Do one job
+* One reason to change
+
+- Business logic and persistence
+
+h3. Open/Closed Principle
+* Open for extension, Closed for modification
+* The axis of change leads to new classes, not changes to existing ones
+* Closely coupled to the Strategy + Abstract Method DP
+
+- src/main/java/ocp/SqlAllInOne.java
+
+
+h3. Liskov Substitution Principle
+* Instances of a subclass should be completely interchangeable with their parent and vice versa
+* Implicit contracts
+
+- Squares and rectangles
+
+h3. Interface Segregation Principle
+* An interface should be a specific as possible
+* Expose many specific interfaces rather than one big one
+
+- 
+
+h3. Dependency Inversion Principle
+* Depend on abstractions, not implementations
+
+- 
+
+h2. The Law of Demeter
+* Only rely on 
+** Things in the current class
+** Arguments in the method call
+** Things created in the method
+** NOT methods on object returned by the above
+
+h2. YAGNI
+* You Aren't Going To Need It
+* aka Speculative Generalisation
