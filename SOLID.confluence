@@ -58,7 +58,10 @@ h3. Dependency Inversion Principle
 * Leads to the use of Dependency _Injection_
 ** High level modules should not depend on low level modules, they both should depend on abstractions
 ** Abstractions should not depend upon details, but the details upon the abstractions.
-- 
+
+* Inject instances implementing interfaces
+* Declare objects as the most abstract interface that still works
+** Collection? List? not ArrayList
 
 h2. YAGNI
 * You Aren't Going To Need It
