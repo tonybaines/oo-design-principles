@@ -1,6 +1,6 @@
 h1. Design Principles
 * Mostly about object orientation
-* The underlying principles are more broadly applicable
+* The underlying principles more broadly applicable
  
 {toc}
 h2. DRY
@@ -10,11 +10,22 @@ h2. DRY
 * Duplicated configuration => unexpected behaviour at runtime 
 
 h2. Coupling & Cohesion
-* Low coupling - 
+* Low coupling; 
+** don't ask, don't tell
+
+* High Cohesion
+**  do just one thing
+
+h3. The Law of Demeter
+* Only rely on 
+** Things in the current class
+** Arguments in the method call
+** Things created in the method
+** NOT methods on object returned by the above
+
 
 h2. SOLID
 Robert Martin (aka Uncle Bob) 
-
 
 h3. Single Responsibility Principle
 * Do one job
@@ -44,16 +55,31 @@ h3. Interface Segregation Principle
 
 h3. Dependency Inversion Principle
 * Depend on abstractions, not implementations
-
+* Leads to the use of Dependency _Injection_
+** High level modules should not depend on low level modules, they both should depend on abstractions
+** Abstractions should not depend upon details, but the details upon the abstractions.
 - 
-
-h2. The Law of Demeter
-* Only rely on 
-** Things in the current class
-** Arguments in the method call
-** Things created in the method
-** NOT methods on object returned by the above
 
 h2. YAGNI
 * You Aren't Going To Need It
 * aka Speculative Generalisation
+* Trust tests, good design principles and refactoring
+
+h2. Favour Composition over Inheritance
+* Inheritance can be confusing
+** overridden methods
+** local scope variable hiding
+** Is-A not always appropriate (animals and swimming)
+
+* Composition 
+** small bits of functionality (very testable)
+** reuse for different types
+** mix-and-match
+
+h1. Where next?
+* Practice, review old code, review others' code, practice
+** Listen to your tests
+* Design Patterns (GoF)
+** Not where you start, where you finish
+** Focus on a few, understand the _reasons_ - Delegate, Factories, Strategy
+* Anti-patterns http://www.c2.com/cgi/wiki?AntiPattern
