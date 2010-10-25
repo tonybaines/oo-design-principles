@@ -29,7 +29,7 @@ Robert Martin (aka Uncle Bob)
 
 h3. Single Responsibility Principle
 * Do one job
-* One reason to change
+* One, and only one, reason to change
 
 - src/main/java/srp
 
@@ -51,7 +51,7 @@ h3. Interface Segregation Principle
 * An interface should be a specific as possible
 * Expose many specific interfaces rather than one big one
 ** Clients see a specific API (isolated from changes to other methods)
-** Implementations avoid null implementations
+** Implementations avoid null implementations (violates LSP)
 
 - src/main/java/isp
 
