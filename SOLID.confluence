@@ -50,8 +50,10 @@ h3. Liskov Substitution Principle
 h3. Interface Segregation Principle
 * An interface should be a specific as possible
 * Expose many specific interfaces rather than one big one
+** Clients see a specific API (isolated from changes to other methods)
+** Implementations avoid null implementations
 
-- 
+- src/main/java/isp
 
 h3. Dependency Inversion Principle
 * Depend on abstractions, not implementations
@@ -84,5 +86,6 @@ h1. Where next?
 ** Listen to your tests
 * Design Patterns (GoF)
 ** Not where you start, where you finish
-** Focus on a few, understand the _reasons_ - Delegate, Factories, Strategy
+** Focus on a few, understand the +reasons+ - Delegate, Factories, Strategy
+* GRASP - common roles for objects http://en.wikipedia.org/wiki/GRASP_(object-oriented_design)
 * Anti-patterns http://www.c2.com/cgi/wiki?AntiPattern
