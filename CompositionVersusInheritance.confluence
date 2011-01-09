@@ -1,0 +1,25 @@
+An excellent article [here|http://openlandscape.wordpress.com/2010/05/11/taking-another-look-at-inheritance/]
+ 
+---
+From [here|http://www.javalobby.org/forums/thread.jspa?forumID=61&threadID=16487]
+{quote}
+   
+    Common problems to the use of inheritance as I see it are: 
+    
+    * Innocent acts can have unexpected results - The classic example of this is calls to overridable methods from the superclass constructor, before the subclasses instance fields have been initialized. In a perfect world, nobody would ever do that. This is not a perfect world.
+    
+    * It offers perverse temptations for subclassers to make assumptions about order of method calls and such - such assumptions tend not to be stable if the superclass may evolve over time. See also my toaster and coffee pot analogy . 
+    
+    * Classes get heavier - you don't necessarily know what work your superclass is doing in its constructor, or how much memory it's going to use. So constructing some innocent would-be lightweight object can be far more expensive than you think, and this may change over time if the superclass evolves
+    
+    * It encourages an explosion of subclasses. Classloading costs time, more classes costs memory. This may be a non-issue until you're dealing with an app on the scale of NetBeans, but there, we had real issues with, for example, menus being slow because the first display of a menu triggered massive class loading. We fixed this by moving to more declarative syntax and other techniques, but that cost time to fix as well.
+    
+    * It makes it harder to change things later - if you've made a class public, swapping the superclass is going to break subclasses - it's a choice which, once you've made the code public, you're married to. So if you're not altering the real functionality to your superclass, you get much more freedom to change things later if you use, rather than extend the thing you need. Take, for example, subclassing JPanel - this is usually wrong; and if the subclass is public somewhere, you never get a chance to revisit that decision. If it's accessed as JComponent getThePanel() , you can still do it (hint: expose models for the components within as your API).
+    
+    * Object hierarchies don't scale (or making them scale later is much harder than planning ahead) - this is the classic "too many layers" problem.
+    
+    * One good reason to use composition is that it allows substitution at runtime. Inheritance is a static relationship between two classes but if class A delegates behaviour to interface I, implemented by class B, then that class B can be substituted with an different implementation of I which provides the same behaviour in a different way.
+    
+{quote}
+
+  
