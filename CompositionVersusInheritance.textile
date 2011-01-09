@@ -1,0 +1,26 @@
+Problems with inheritance
+* It breaks encapsulation - subclasses have access to protected implementation details and members
+* It creates high coupling - by definition, you can't have a subclass without it's parent(s), and changes to the parent necessitate changes to the subclasses
+* Comprehension is harder - understanding which implementation a subclass uses
+
+h2. Example
+
+
+pre.. 
+
+Animals
+   |- Mammals
+   |    |- Apes
+   |    |   |- Humans
+   |    |- Dogs
+   |- Fish
+   |- Birds
+
+p. Operation: @move()@ - walking (two/four legs), flying, swimming
+
+Introduce @Ostrich@, @Penguin@
+
+
+h3. Further reading
+
+An excellent article "here":http://openlandscape.wordpress.com/2010/05/11/taking-another-look-at-inheritance/

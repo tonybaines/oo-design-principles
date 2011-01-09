@@ -1,15 +1,19 @@
 h1. Design Principles
+
 * Mostly about object orientation
 * The underlying principles more broadly applicable
  
 {toc}
+
 h2. DRY
+
 * Don't Repeat Yourself
 * One authoritative source of every piece of information or logic
 * Duplicated code => duplicated bugs
 * Duplicated configuration => unexpected behaviour at runtime 
 
 h2. Coupling & Cohesion
+
 * Low coupling; 
 ** don't ask, don't tell
 
@@ -17,6 +21,7 @@ h2. Coupling & Cohesion
 **  do just one thing
 
 h3. The Law of Demeter
+
 * Only rely on 
 ** Things in the current class
 ** Arguments in the method call
@@ -25,15 +30,18 @@ h3. The Law of Demeter
 
 
 h2. SOLID
+
 Robert Martin (aka Uncle Bob) 
 
 h3. Single Responsibility Principle
+
 * Do one job
 * One, and only one, reason to change
 
 - src/main/java/srp
 
 h3. Open/Closed Principle
+
 * Open for extension, Closed for modification
 * The axis of change leads to new classes, not changes to existing ones
 * Closely coupled to the Strategy + Abstract Method DP
@@ -42,12 +50,14 @@ h3. Open/Closed Principle
 
 
 h3. Liskov Substitution Principle
+
 * Instances of a subclass should be completely interchangeable with their parent and vice versa
 * Implicit contracts
 
 - src/main/java/lsp
 
 h3. Interface Segregation Principle
+
 * An interface should be a specific as possible
 * Expose many specific interfaces rather than one big one
 ** Clients see a specific API (isolated from changes to other methods)
@@ -56,6 +66,7 @@ h3. Interface Segregation Principle
 - src/main/java/isp
 
 h3. Dependency Inversion Principle
+
 * Depend on abstractions, not implementations
 * Leads to the use of Dependency _Injection_
 ** High level modules should not depend on low level modules, they both should depend on abstractions
@@ -66,11 +77,13 @@ h3. Dependency Inversion Principle
 ** Collection? List? not ArrayList
 
 h2. YAGNI
+
 * You Aren't Going To Need It
 * aka Speculative Generalisation
 * Trust tests, good design principles and refactoring
 
 h2. Favour Composition over Inheritance
+
 * Inheritance can be confusing
 ** overridden methods
 ** local scope variable hiding
@@ -82,6 +95,7 @@ h2. Favour Composition over Inheritance
 ** mix-and-match
 
 h1. Where next?
+
 * Practice, review old code, review others' code, practice
 ** Listen to your tests
 * Design Patterns (GoF)
