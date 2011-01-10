@@ -6,24 +6,34 @@ Problems with inheritance
 h2. Example
 
 
-pre.. 
-
+pre..
 Animals
    |- Mammals
    |    |- Apes
-   |    |   |- Humans
-   |    |- Dogs
+   |    |   |- Human
+   |    |
+   |    |- Monkeys
+   |
    |- Fish
    |    |-Salmon
+   |
    |- Birds
-        |- Duck
+   |    |- Duck
+   |
+   |- Reptiles
+        |- Snake
 
-p. Operation: @move()@ - walking (two/four legs), flying, swimming
+p. Operations:
+* @move()@ - walking (two/four legs), flying, swimming
+* @isThirsty()@ / @setThirsty()@ / @drink()@
 
-What about @Ostrich@, @Penguin@, @Dolphin@
-* the hierarchy is starting to look untidy
+
+* What is common behaviour between Mammals, Apes, Monkeys?
+* What about @Ostrich@, @Penguin@, @Dolphin@
+** the hierarchy is starting to look untidy
 * duplication/distribution of test logic of test logic
 ** one test for each subclass - what about inherited logic?
+
 * duplication of implementations
 ** can pull out to helpers e.g. @new WalkingAbility()@
 ** leads on to a refactoring into composition

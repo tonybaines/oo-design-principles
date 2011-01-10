@@ -9,11 +9,14 @@ public class AnimalsTest {
       Animal duck = new Duck();
       Animal dog = new Dog();
       Animal salmon = new Salmon();
+      Animal croc = new Crocodile();
+      Animal snake = new Snake();
 
       assertEquals("Walk", human.move());
       assertEquals("Fly", duck.move());
-      assertEquals("Canter", horse.move());
       assertEquals("Swim", salmon.move());
+      assertEquals("Walk", croc.move());
+      assertEquals("Slither", snake.move());
 
       /* What about an Orangutan (
        * - climb or walk?
