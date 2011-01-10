@@ -25,7 +25,6 @@ Animals
 
 p. Operations:
 * @move()@ - walking (two/four legs), flying, swimming
-* @isThirsty()@ / @setThirsty()@ / @drink()@
 
 
 * What is common behaviour between Mammals, Apes, Monkeys?
@@ -33,6 +32,10 @@ p. Operations:
 ** the hierarchy is starting to look untidy
 * duplication/distribution of test logic of test logic
 ** one test for each subclass - what about inherited logic?
+
+* State changes
+** @isThirsty()@ / @setThirsty()@ / @drink()@
+**
 
 * duplication of implementations
 ** can pull out to helpers e.g. @new WalkingAbility()@
