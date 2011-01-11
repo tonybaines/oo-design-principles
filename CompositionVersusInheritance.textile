@@ -6,42 +6,51 @@ Problems with inheritance
 h2. Example
 
 
-pre..
-Animals
+pre.. Animals
    |- Mammals
-   |    |- Apes
-   |    |   |- Human
+   |    |- Eutheria 
+   |    |     |- Primates
+   |    |     |     |- Apes
+   |    |     |     |   |- Humans
+   |    |     |     |
+   |    |     |     |- Monkeys
    |    |
-   |    |- Monkeys
+   |    |- Cetacea
+   |    |     |- Dolphins
+   |    |
+   |    |- Carnivora
+   |          |- Bears
    |
-   |- Fish
-   |    |-Salmon
+   |- Metatheria (marsupials)
    |
-   |- Birds
-   |    |- Duck
-   |
-   |- Reptiles
-        |- Snake
+   ...
+
 
 p. Operations:
-* @move()@ - walking (two/four legs), flying, swimming
+* @move()@ - walking (two/four legs), running, swimming
 
 
 * What is common behaviour between Mammals, Apes, Monkeys?
-* What about @Ostrich@, @Penguin@, @Dolphin@
+* What about @Dolphin@
 ** the hierarchy is starting to look untidy
 * duplication/distribution of test logic of test logic
 ** one test for each subclass - what about inherited logic?
 
-* State changes
+* State changes?
 ** @isThirsty()@ / @setThirsty()@ / @drink()@
-**
 
 * duplication of implementations
 ** can pull out to helpers e.g. @new WalkingAbility()@
 ** leads on to a refactoring into composition
-*** @Factory@ and dependency injection required
-*** improves testability - just test the behaviour in the composable class
+*** @Factory@ required for dependency injection
+*** Decoration may be more suitable for other models e.g.
+pre.. BankAccount
+	|- SimpleAccount (overdraft allowed)
+	|- SuperSaverAccount (no overdraft)
+
+p. @SuperSaverAccount@ decorates @SimpleAccount@, wrapping the call to @debit()@ and throwing an exception if insufficient funds
+
+* improves testability - just test the behaviour in the composable class
 * Can move on to discuss mixin composition (walk, climb, swim, ...)
 
 
