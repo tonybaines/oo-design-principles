@@ -14,13 +14,13 @@ public class AccountTest {
 	}
 	
 	@Test
-	public void testSimple() {
+	public void aSimpleAccountCanGoOverdrawn() {
 		simpleAcct.debit(110);
 		assertEquals(-10, simpleAcct.getBalance(), 0);
 	}
 	
 	@Test(expected=IllegalStateException.class)
-	public void testSuperSaver() {
+	public void aSuperSaverAccountCannotGoOverdrawn() {
 		SuperSaverAccount superSaver = new SuperSaverAccount(simpleAcct);
 		superSaver.debit(110);
 	}

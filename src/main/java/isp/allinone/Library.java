@@ -2,7 +2,7 @@ package isp.allinone;
 
 public interface Library {
   void join(String borrower);
-  void leave(String borower);
+  void leave(String borrower);
   String[] findBookByTitle(String title);
   String[] findBookByAuthor(String author);
   String[] findBookByISBN(String isbn);

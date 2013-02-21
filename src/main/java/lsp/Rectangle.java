@@ -18,6 +18,6 @@ public class Rectangle {
   }
   
   public int getArea() {
-    return height*width;
+    return getHeight()*getWidth();
   }
 }

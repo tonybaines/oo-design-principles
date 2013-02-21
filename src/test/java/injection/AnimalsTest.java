@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class AnimalsTest {
     @Test
-    public void testMe() {
+    public void shouldWalkLikeAnAnimal() {
       AnimalFactory factory = new AnimalFactory();
       Animal human = factory.createNew("Human");
       Animal dolphin = factory.createNew("Dolphin");

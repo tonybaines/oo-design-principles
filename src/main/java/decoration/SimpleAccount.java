@@ -8,17 +8,14 @@ public class SimpleAccount implements Account {
 		this.balance = openingBalance;
 	}
 	
-	@Override
 	public double getBalance() {
 		return this.balance;
 	}
 
-	@Override
 	public void credit(double amt) {
 		this.balance += amt;
 	}
 
-	@Override
 	public void debit(double amt) {
 		this.balance -= amt;
 	}

@@ -7,7 +7,6 @@ public abstract class Mammal implements Animal {
 		this.movement = movement;
 	}
 
-	@Override
 	public String move() {
 		return this.movement.move();
 	}

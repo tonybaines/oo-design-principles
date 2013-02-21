@@ -1,6 +1,6 @@
 package isp.segregated;
 
-public interface LendingMaintainenceService {
+public interface LendingMaintenanceService {
   String[] borrowedBooks(String borrower);
   String[] overdueBooks(String borrower);
 }

@@ -8,21 +8,17 @@ public class SuperSaverAccount implements Account {
 		this.delegate = delegate;
 	}
 
-	@Override
 	public void credit(double amt) {
 		this.delegate.credit(amt);
 	}
 
-	@Override
 	public void debit(double amt) {
-		if (getBalance() >= amt) {
-			this.delegate.debit(amt);
-		} else {
+		if (getBalance() <= amt) {
 			throw new IllegalStateException("Insufficient funds");
 		}
+        this.delegate.debit(amt);
 	}
 
-	@Override
 	public double getBalance() {
 		return this.delegate.getBalance();
 	}

@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class AnimalsTest {
     @Test
-    public void testMe() {
+    public void shouldWalkLikeAnAnimal() {
       Animal human = new Human();
       Animal dolphin = new Dolphin();
       Animal bear = new Bear();
